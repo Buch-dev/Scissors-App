@@ -43,7 +43,7 @@
             />
           </div>
           <button class="btn text-sm flex items-center justify-center">
-            Trim URL <img src="../assets/img/magic wand.svg" alt="magic" />
+            Trim URL <img src="../assets/img/magic-wand.svg" alt="magic" />
           </button>
         </form>
       </transition>
