@@ -2,7 +2,7 @@
   <div>
     <header>
       <nav
-        class="flex justify-between items-center mt-4 container p-4 mx-auto"
+        class="flex justify-between items-center container p-4 mx-auto"
       >
         <div class="logo">
           <Logo />
