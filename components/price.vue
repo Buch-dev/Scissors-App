@@ -1,10 +1,10 @@
 <template>
-  <div class="container p-4 mx-auto mt-44">
-    <h1 class="text-4xl flex font-bold items-center justify-center">
-      <VerticalLine class="mr-4" /> A <span class="text-primaryBlue mx-2">price perfect</span> for
+  <div class="container p-4 mx-auto mt-44" id="price">
+    <h1 class=" text-4xl text-center md:text-4xl md:flex font-bold md:items-center md:justify-center">
+      <VerticalLine class="hidden md:block mr-4" /> A <span class="text-primaryBlue md:mx-2">price perfect</span> for
       your needs.
     </h1>
-    <p class="mt-2 text-base text-center">
+    <p class="mt-2 text-base text-center leading-7 px-4 md:px-0 md:leading-normal">
       From catering for your personal, business, events, social needs, you can
       be <br> rest assured we have you in mind in our pricing.
     </p>
@@ -17,11 +17,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent} from "vue";
 import PriceCard from ".nuxt/types/price";
 
 export default defineComponent({
   setup() {
+    
     const pricecard = ref<PriceCard[]>([
       {
         title: "Basic",

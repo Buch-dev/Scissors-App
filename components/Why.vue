@@ -1,13 +1,13 @@
 <template>
-  <div class="mt-[136px] container p-4 mx-auto flex flex-row gap-24">
-    <div class="flex flex-col w-[35%]">
+  <div class="mt-[136px] container p-4 mx-auto flex flex-col md:flex-row gap-24">
+    <div class="flex flex-col md:w-[35%]">
       <div class="flex items-center gap-4">
         <VerticalLine />
-        <h1 class="text-[36px] font-bold">
+        <h1 class="md:text-[36px] font-bold text-3xl">
           Why Choose <span class="text-primaryBlue">Scissors</span>
         </h1>
       </div>
-      <p class="text-base mt-6">
+      <p class="text-base mt-6 text-center leading-8 md:leading-normal md:text-left">
         Scissors is the hub of everything that has to do with your link
         management. We shorten your URLs, allow you creating custom ones for
         your personal, business, event usage. Our swift QR code creation,
@@ -15,7 +15,7 @@
         second to none.
       </p>
     </div>
-    <FeaturesComp :feature="feature" class="w-[65%]" />
+    <FeaturesComp :feature="feature" class="md:w-[65%]" />
   </div>
 </template>
 

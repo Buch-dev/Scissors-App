@@ -1,10 +1,11 @@
 <template>
-  <div>
-    <ul class=" grid grid-cols-2 gap-x-7 gap-y-16">
-      <li v-for="item in feature" :key="item.icon">
+  <div class="">
+    <ul class=" grid grid-cols-1 text-center md:text-left md:grid-cols-2 gap-x-7 gap-y-16">
+      <li v-for="item in feature" :key="item.icon" class="text-center">
         <img
           :src="`./assets/img/${item.icon}`"
           alt=""
+          class="mx-auto md:mx-0"
         />
         <h2 class="text-4xl mt-[40px]">{{ item.title }}</h2>
         <p class="text-base mt-[16px]">{{ item.text }}</p>

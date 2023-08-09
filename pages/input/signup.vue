@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center justify-center">
-    <div class="flex flex-col items-center w-[462px] my-[132px]">
+    <div class="flex flex-col items-center w-[80%] md:w-[462px] my-[132px]">
       <p>Sign up with:</p>
       <div class="flex gap-6 my-4">
         <button
@@ -16,9 +16,9 @@
         </button>
       </div>
       <div class="flex items-center">
-        <img src="@/assets/img/horizontal-line.png" alt="horizontal line" />
+        <img src="@/assets/img/horizontal-line.png" alt="horizontal line" class="hidden md:block" />
         <span class="mx-5">Or</span>
-        <img src="@/assets/img/horizontal-line.png" alt="horizontal line" />
+        <img src="@/assets/img/horizontal-line.png" alt="horizontal line" class="hidden md:block" />
       </div>
       <transition
         enter-active-class="duration-500 ease-out"
@@ -74,12 +74,12 @@
           <p class="text-xs mt-3 mb-[34px] text-[#A0B1C0]">
             6 or more characters, one number, one uppercase & one lower case.
           </p>
-          <button class="btn text-sm flex items-center justify-center">
+          <button @click="handleSignup" class="btn text-sm flex items-center justify-center">
             Sign up with Email
           </button>
           <p class="text-[#5C6F7F] text-sm text-center mt-6 mb-[21px]">
             Don't have an account?
-            <NuxtLink to="#" class="text-[#4991FF]">Sign up</NuxtLink>
+            <NuxtLink to="/input/login" class="text-[#4991FF]">Log in</NuxtLink>
           </p>
         </form>
       </transition>
@@ -103,6 +103,10 @@ export default defineComponent({
     const password = ref("");
     const confirmPassword = ref("");
     const passwordVisible = ref(false);
+    const form = reactive({
+      email: "",
+      password: "",
+    });
 
     const togglePasswordVisibility = () => {
       passwordVisible.value = !passwordVisible.value;
@@ -116,12 +120,32 @@ export default defineComponent({
       });
     };
 
+    const errors = ref<string>("");
+
+    const handleSignup = async () => {
+      try {
+        const { data, error } = await supabaseAuth.auth.signUp({
+          email: form.email,
+          password: form.password,
+        });
+
+        if (error) {
+          errors.value = error.message;
+          return;
+        }
+        console.log({ data });
+      } catch (err) {
+        errors.value = "Something went wrong";
+      }
+    };
+
     return {
       password,
       confirmPassword,
       passwordVisible,
       togglePasswordVisibility,
       handleGoogleLogin,
+      handleSignup,
     };
   },
 });

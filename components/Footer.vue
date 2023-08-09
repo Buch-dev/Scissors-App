@@ -1,10 +1,10 @@
 <template>
   <div class="custom-bg-images">
-    <div class="container p-4">
-      <div class="flex container px-4 pt-[103px] mx-auto justify-between">
-        <div class="logo w-[25%]">
-          <img src="../assets/img/footer-logo.png" alt="footer logo" />
-          <div class="icons flex gap-8 mt-10">
+    <div class="container p-4 mx-auto">
+      <div class="flex flex-col-reverse gap-10 container px-4 pt-[103px] mx-auto md:flex-row md:justify-between md:gap-72">
+        <div class="logo md:w-[25%]">
+          <img src="../assets/img/footer-logo.png" alt="footer logo" class="mx-auto md:m-0" />
+          <div class="icons flex gap-8 mt-10 justify-evenly md:justify-normal">
             <img
               src="../assets/img/twitter.svg"
               alt="twitter"
@@ -28,8 +28,8 @@
           </div>
         </div>
 
-        <div class="grid grid-cols-4 gap-5 w-[75%]">
-          <div v-for="(item, index) in footer" :key="index" class="">
+        <div class="grid gap-5 md:grid-cols-4 md:w-[75%]">
+          <div v-for="(item, index) in footer" :key="index" class="text-center md:text-left">
             <b class="text-base">{{ item.head }}</b>
             <p
               v-for="(body, index) in item.body"
@@ -41,7 +41,7 @@
           </div>
         </div>
       </div>
-      <p class="mt-[23px] text-sm mb-10 text-right">
+      <p class="mt-[23px] text-sm mb-10 text-center md:text-right">
         Term of Service | Security | Scissor 2023
       </p>
     </div>

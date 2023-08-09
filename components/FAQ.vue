@@ -7,13 +7,13 @@
     <div
       v-for="(item, index) in faqs"
       :key="index"
-      class="border-b w-[792px] mx-auto p-5"
+      class="border-b w-full mx-auto p-5 md:w-[792px]"
     >
       <div
         class="flex items-center justify-between cursor-pointer"
         @click="toggleAnswer(index)"
       >
-        <h3 class="text-xl font-medium">
+        <h3 class="text-lg w-4/5 md:w-auto md:text-xl md:font-medium">
           {{ item.question }}
         </h3>
         <button class="text-lg font-bold">

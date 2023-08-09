@@ -1,9 +1,9 @@
 <template>
-  <div class="flex px-8 mt-[68px] items-center justify-center">
+  <div class="flex flex-col mt-[68px] items-center justify-center md:flex-row md:px-8">
     <div
       v-for="(item, index) in pricecard"
       :key="index"
-      class="border-[0.4px] border-[#005AE2] items-center p-8 rounded-xl shadow-lg cursor-pointer transition-transform duration-300 transform hover:-translate-y-2 w-[379px] hover:w-[410px] hover:h-[627px] hover:bg-[#1E3448] hover:text-white"
+      class="border-[0.4px] border-[#005AE2] items-center p-8 rounded-xl shadow-lg cursor-pointer transition-transform duration-300 transform hover:-translate-y-2 w-full md:w-[379px]"
     >
       <h5 class="text-2xl">{{ item.title }}</h5>
       <h2 class="text-[40px] mt-[34px] font-bold">{{ item.price }}</h2>

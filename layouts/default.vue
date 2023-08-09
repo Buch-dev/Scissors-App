@@ -8,6 +8,9 @@
   </div>
 </template>
 
+<script lang="ts">
+</script>
+
 <style scoped>
 .custom-bg-img {
   background-image: url("../assets/img/red-gradient.png"),

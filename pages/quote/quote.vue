@@ -9,11 +9,11 @@
       >
     <form
       action=""
-      class="mt-[23.39px] text-base w-[570px] mx-auto bg-[#CBD6E0] px-[30px] pb-[60.36px] rounded-md text-[#112232] mb-[100.64px]"
+      class="mt-[23.39px] text-base mx-auto bg-[#CBD6E0] px-[30px] pb-[60.36px] rounded-md text-[#112232] mb-[100.64px] w-[90%] md:w-[570px]"
     >
       <div class="flex flex-col gap-[13.81px]">
         <div
-          class="name mt-[106.61px] flex justify-between items-center gap-4"
+          class="name mt-[106.61px] flex flex-col md:flex-row md:justify-between md:items-center gap-4"
         >
           <div class="firstname">
             <label for="firstname" class="">First Name*</label>

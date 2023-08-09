@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center justify-center">
-    <div class="flex flex-col items-center w-[462px] my-[132px]">
+    <div class="flex flex-col items-center w-[80%] md:w-[462px] my-[132px]">
       <p>Log in with:</p>
       <div class="flex gap-6 my-4">
         <button
@@ -16,9 +16,9 @@
         </button>
       </div>
       <div class="flex items-center">
-        <img src="@/assets/img/horizontal-line.png" alt="horizontal line" />
+        <img src="@/assets/img/horizontal-line.png" alt="horizontal line" class="hidden md:block" />
         <span class="mx-5">Or</span>
-        <img src="@/assets/img/horizontal-line.png" alt="horizontal line" />
+        <img src="@/assets/img/horizontal-line.png" alt="horizontal line" class="hidden md:block" />
       </div>
       <transition
         enter-active-class="duration-500 ease-out"
@@ -62,7 +62,7 @@
           <div class="text-red-500 mt-5 italic">{{ errors }}</div>
           <p class="text-[#5C6F7F] text-sm text-center my-4">
             Don't have an account?
-            <NuxtLink to="#" class="text-[#4991FF]">Sign up</NuxtLink>
+            <NuxtLink to="/input/signup" class="text-[#4991FF]">Sign up</NuxtLink>
           </p>
         </form>
       </transition>
