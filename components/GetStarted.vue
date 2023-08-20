@@ -5,7 +5,10 @@
     <h2 class="font-bold text-[43px] md:text-[40px] text-white">
       Revolutionizing Link Optimization
     </h2>
-    <button class="btn mt-8">Get Started</button>
+
+    <NuxtLink to="/input/signup"
+      ><button class="btn mt-8 animate-pulse">Get Started</button>
+    </NuxtLink>
   </div>
 </template>
 

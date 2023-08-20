@@ -1,9 +1,9 @@
 <template>
   <div class="mt-[136px] container p-4 mx-auto flex flex-col md:flex-row gap-24">
     <div class="flex flex-col md:w-[35%]">
-      <div class="flex items-center gap-4">
+      <div class="flex items-center">
         <VerticalLine />
-        <h1 class="md:text-[36px] font-bold text-3xl">
+        <h1 class="md:text-[36px] font-bold text-3xl ml-4">
           Why Choose <span class="text-primaryBlue">Scissors</span>
         </h1>
       </div>

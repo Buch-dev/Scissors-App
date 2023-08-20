@@ -2,16 +2,16 @@
   <div class="flex flex-col items-center justify-center">
     <div class="flex flex-col items-center w-[80%] md:w-[462px] my-[132px]">
       <p>Log in with:</p>
-      <div class="flex gap-6 my-4">
+      <div class="flex my-4">
         <button
-          class="btn flex items-center gap-1 rounded-[3px]"
+          class="btn flex items-center mr-6 rounded-[3px]"
           @click="handleGoogleLogin"
         >
-          <img src="@/assets/img/google.png" alt="google" />
+          <img src="@/assets/img/google.png" alt="google" class="mr-1" />
           <span>Google</span>
         </button>
-        <button class="btn flex items-center gap-1 rounded-[3px]">
-          <img src="@/assets/img/apple.png" alt="apple" />
+        <button class="btn flex items-center rounded-[3px]">
+          <img src="@/assets/img/apple.png" alt="apple" class="mr-1" />
           <span>Apple</span>
         </button>
       </div>

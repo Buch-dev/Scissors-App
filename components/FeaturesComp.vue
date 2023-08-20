@@ -5,7 +5,7 @@
         <img
           :src="`./assets/img/${item.icon}`"
           alt=""
-          class="mx-auto md:mx-0"
+          class="mx-auto"
         />
         <h2 class="text-4xl mt-[40px]">{{ item.title }}</h2>
         <p class="text-base mt-[16px]">{{ item.text }}</p>

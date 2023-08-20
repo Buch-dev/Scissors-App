@@ -9,21 +9,21 @@
           <Logo />
         </div>
         <ul class="flex gap-8">
-          <li><NuxtLink class="text-primaryBlue" to="#">My URLs</NuxtLink></li>
+          <li><NuxtLink class="text-primaryBlue hover:animate-pulse" to="#">My URLs</NuxtLink></li>
           <li>
-            <NuxtLink class="flex justify-between items-center" to="#"
-              >Features <span><DropDownBlack /></span
+            <NuxtLink class="flex justify-between items-center hover:animate-pulse" to="#"
+              >Features <span class="ml-1"><DropDownBlack /></span
             ></NuxtLink>
           </li>
-          <li><NuxtLink class="" to="#">Pricing</NuxtLink></li>
-          <li><NuxtLink class="" to="#">Analytics</NuxtLink></li>
-          <li><NuxtLink class="" to="#">FAQs</NuxtLink></li>
+          <li><NuxtLink class="hover:animate-pulse" to="#">Pricing</NuxtLink></li>
+          <li><NuxtLink class="hover:animate-pulse" to="#">Analytics</NuxtLink></li>
+          <li><NuxtLink class="hover:animate-pulse" to="#">FAQs</NuxtLink></li>
         </ul>
         <div class="login flex gap-7 items-center justify-between">
-          <NuxtLink to="/input/login" class="text-primaryBlue"
+          <NuxtLink to="/input/login" class="text-primaryBlue hover:animate-pulse"
             >Log in</NuxtLink
           >
-          <button class="btn">Try for free</button>
+          <button class="btn animate-pulse">Try for free</button>
         </div>
       </nav>
 
@@ -31,7 +31,7 @@
       <nav
         class="md:hidden flex justify-between items-center container p-4 mx-auto"
       >
-        <div class="logo">
+        <div class="logo hover:animate-pulse cursor-pointer">
           <Logo />
         </div>
         <button
@@ -43,20 +43,20 @@
         </button>
       </nav>
       <div v-if="showMobileMenu" class="md:hidden">
-        <ul class="flex flex-col text-center gap-4">
-          <li><NuxtLink class="text-primaryBlue" to="#">My URLs</NuxtLink></li>
-          <li><NuxtLink class="" to="#">Features</NuxtLink></li>
-          <li>
+        <ul class="flex flex-col text-center">
+          <li class="mb-4 hover:animate-pulse"><NuxtLink class="text-primaryBlue" to="#">My URLs</NuxtLink></li>
+          <li class="mb-4 hover:animate-pulse"><NuxtLink class="" to="#">Features</NuxtLink></li>
+          <li class="mb-4 hover:animate-pulse">
             <NuxtLink class="" to="#" @click="goToSection">Pricing</NuxtLink>
           </li>
-          <li><NuxtLink class="" to="#">Analytics</NuxtLink></li>
-          <li><NuxtLink class="" to="#">FAQs</NuxtLink></li>
-          <li>
+          <li class="mb-4 hover:animate-pulse"><NuxtLink class="" to="#">Analytics</NuxtLink></li>
+          <li class="mb-4 hover:animate-pulse"><NuxtLink class="" to="#">FAQs</NuxtLink></li>
+          <li class="mb-4 hover:animate-pulse">
             <NuxtLink to="/input/login" class="text-primaryBlue"
               >Log in</NuxtLink
             >
           </li>
-          <li><button class="btn">Try for free</button></li>
+          <li class="mt-4 hover:animate-bounce"><button class="btn">Try for free</button></li>
         </ul>
       </div>
     </header>

@@ -10,20 +10,20 @@
           Four <span class="text-primaryBlue">Possibilities</span>.
         </div>
         <div
-          class="flex gap-6 md:gap-3 flex-col md:flex-row md:justify-between md:w-[60%]"
+          class="flex md:gap-3 flex-col md:flex-row md:justify-between md:w-[60%]"
         >
-          <div class="text-center md:text-left">
+          <div class="text-center md:text-left mb-6">
             <h3 class="font-semibold text-3xl">3M</h3>
             <p class="text-base">Active Users</p>
           </div>
-          <div class="text-center md:text-left">
+          <div class="text-center md:text-left mb-6">
             <h3 class="font-semibold text-3xl">60M</h3>
             <p class="text-base">
               Links & QR <br />
               Codes created
             </p>
           </div>
-          <div class="text-center md:text-left">
+          <div class="text-center md:text-left mb-6">
             <h3 class="font-semibold text-3xl">1B</h3>
             <p class="text-base">
               Clicked and Scanned <br />

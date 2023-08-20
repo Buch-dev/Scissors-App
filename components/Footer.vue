@@ -1,29 +1,29 @@
 <template>
   <div class="custom-bg-images">
     <div class="container p-4 mx-auto">
-      <div class="flex flex-col-reverse gap-10 container px-4 pt-[103px] mx-auto md:flex-row md:justify-between md:gap-72">
-        <div class="logo md:w-[25%]">
+      <div class="flex flex-col-reverse container px-4 pt-[103px] mx-auto md:flex-row md:justify-between">
+        <div class="logo mt-10 md:mr-72 md:w-[25%]">
           <img src="../assets/img/footer-logo.png" alt="footer logo" class="mx-auto md:m-0" />
           <div class="icons flex gap-8 mt-10 justify-evenly md:justify-normal">
             <img
               src="../assets/img/twitter.svg"
               alt="twitter"
-              class="duration-300"
+              class="duration-300 hover:animate-bounce cursor-pointer"
             />
             <img
               src="../assets/img/instagram.svg"
               alt="instagram"
-              class="duration-300"
+              class="duration-300 hover:animate-bounce cursor-pointer"
             />
             <img
               src="../assets/img/linkedin.svg"
               alt="linkdelin"
-              class="duration-300"
+              class="duration-300 hover:animate-bounce cursor-pointer"
             />
             <img
               src="../assets/img/facebook.svg"
               alt="facebook"
-              class="duration-300"
+              class="duration-300 hover:animate-bounce cursor-pointer"
             />
           </div>
         </div>

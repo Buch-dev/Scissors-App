@@ -20,12 +20,14 @@
             placeholder="Place URL here..."
             class="w-full px-4 py-3 text-[12px] text-primaryBlue placeholder:text-primaryBlue rounded-xl border border-gray-400 focus:outline-none focus:border-primaryBlue transition-all duration-500 ease-in-out"
           />
-          <div class="flex flex-col gap-4 items-center relative md:flex-row md:justify-between">
+          <div
+            class="flex flex-col items-center relative md:flex-row md:justify-between"
+          >
             <select
               name=""
               id=""
               placeholder="Choose Domain"
-              class="text-primaryBlue text-sm placeholder:text-primaryBlue rounded-xl border border-gray-400 focus:outline-none focus:border-primaryBlue transition-all duration-500 ease-in-out bg-white px-4 py-3 appearance-none leading-5 focus:ring-0 focus:ring-primaryBlue w-full md:w-[202px]"
+              class="text-primaryBlue mb-4 text-sm placeholder:text-primaryBlue rounded-xl border border-gray-400 focus:outline-none focus:border-primaryBlue transition-all duration-500 ease-in-out bg-white px-4 py-3 appearance-none leading-5 focus:ring-0 focus:ring-primaryBlue w-full md:mb-0 md:w-[202px]"
             >
               <option disabled selected value="" class="text-primaryBlue">
                 Choose Domain
@@ -56,7 +58,10 @@
             placeholder="Place URL here..."
             class="w-full px-4 py-3 text-[12px] text-primaryBlue placeholder:text-primaryBlue rounded-xl border border-gray-400 focus:outline-none focus:border-primaryBlue transition-all duration-500 ease-in-out"
           />
-          <button type="submit" class="btn text-sm flex items-center justify-center">
+          <button
+            type="submit"
+            class="btn text-sm flex items-center justify-center"
+          >
             Trim URL <img src="../assets/img/magic-wand.svg" alt="magic" />
           </button>
         </form>
@@ -87,14 +92,14 @@ export default defineComponent({
     });
 
     const client = useSupabaseClient<Database>();
-    const user = useSupabaseUser()
+    const user = useSupabaseUser();
 
     const handleLinkForm = async () => {
       try {
         const { data, error } = await client.from("links").insert({
           long_url: form.long_url,
           key: form.key,
-          user_id: user.value?.id
+          user_id: user.value?.id,
         });
 
         if (error) {
@@ -102,11 +107,9 @@ export default defineComponent({
           return;
         }
 
-        if (data) {
-          createShortKey();
-          form.long_url = "";
-          alert("Link created successfully");
-        }
+        createShortKey();
+        form.long_url = "";
+        alert("Link created successfully");
       } catch (e) {
         console.log(e);
       }
